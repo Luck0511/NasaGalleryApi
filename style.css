@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-weight: 100;
+    font-family: sans-serif;
+    max-width: 100vw;
+    background-image: url("./imgs/universeBG.jpg");
+    background-size: 100vw;
+    background-color: #091150;
+}
+
+header{
+    background-color: #1C2E7099;
+    color: #FFD700;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+header img{
+    display: block;
+    width: 200px;
+    height: auto;
+    padding: 0;
+    vertical-align: middle;
+    margin-left: 24px;
+}
+
+header nav{
+    justify-self: end;
+}
+
+.headerHero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0 24px 0;
+}
+
+.headerHero p{
+    margin: 5px 10px 10px 10px;
+    text-align: center;
+}
+
+.headerHero h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.headerHero p,h1,label{
+    background: linear-gradient(270deg, #FFD700, #00CFFF, #FF69B4, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 800% 800%;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 10s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0 50%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+#parameterForm {
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#imageSec{
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+}
+
+.card{
+    display: grid;
+    grid-template-rows: auto auto;
+    overflow: hidden;
+    max-width: 25vw;
+    margin: 20px 10px;
+    border: 1px solid #1C2E70;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.card p {
+    text-align: center;
+    font-size: 16px;
+    margin: 32px 5px;
+}
+
+.card img{
+    width: 100%;
+    height: 25vw;
+    align-self:  stretch;
+    justify-self: stretch;
+    border-bottom: 1px solid #1C2E70;
+}
