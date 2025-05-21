@@ -9,15 +9,39 @@
 </head>
 
 <header>
-    <img src="./imgs/logo.svg" alt="logo">
+    <div class="imgBox">
+        <img src="./imgs/logo.svg" alt="logo">
+    </div>
 
     <div class="headerHero">
         <h1>NASA Gallery API</h1>
         <p>Insert any keyword to start searching in the <br> biggest space photography
         gallery of the World!</p>
         <form id="parameterForm">
-            <label for="parameter">Search:</label>
-            <input type="text" id="parameter" name="parameter">
+            <fieldset>
+                <label for="parameter">Free Search:</label>
+                <input type="text" id="parameter" name="parameter">
+            </fieldset>
+
+            <h2>or</h2>
+
+            <fieldset>
+                <label for="parametersList">try our suggestions: </label>
+                <input list="parametersList" id="parametersListSelect" name="parametersList">
+                <select id="parametersList">
+                    <option value="none">-- Select one of the suggestions --</option>
+                    <option value="sun">Sun</option>
+                    <option value="mercury">Mercury</option>
+                    <option value="venus">Venus</option>
+                    <option value="earth">Earth</option>
+                    <option value="mars">Mars</option>
+                    <option value="jupiter">Jupiter</option>
+                    <option value="saturn">Saturn</option>
+                    <option value="uranus">Uranus</option>
+                    <option value="neptune">Neptune</option>
+                </select>
+            </fieldset>
+
             <button type="submit">Search</button>
         </form>
     </div>
