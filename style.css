@@ -15,25 +15,35 @@ header{
     color: #FFD700;
     height: fit-content;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     align-items: center;
 }
 
-header img{
+.imgBox{
+    container-name: imgBox;
+    display: flex;
+    width: auto;
+}
+
+.imgBox img{
     display: block;
-    width: 200px;
+    width: auto;
+    max-width: 200px;
     height: auto;
     padding: 0;
     vertical-align: middle;
+    justify-self: center;
     margin-left: 24px;
+    margin-right: 24px;
 }
 
 header nav{
-    justify-self: end;
+    justify-self: center;
 }
 
 .headerHero{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -53,7 +63,7 @@ header nav{
     text-transform: uppercase;
 }
 
-.headerHero p,h1,label{
+.headerHero p,h1{
     background: linear-gradient(270deg, #FFD700, #00CFFF, #FF69B4, #FFD700);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -72,9 +82,35 @@ header nav{
 }
 
 #parameterForm {
+    display: flex;
+    flex-direction: column;
     align-self: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#parameterForm h2{
+    text-align: center;
+    margin: 2px 0 2px 0;
+}
+
+#parameterForm button{
+    align-self: center;
+    justify-self: center;
+    margin: 5px 0 0 0;
+    border: none;
+    border-radius: 10px;
+    background: #00CFFF;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    color: #091150;
+}
+
+#parameterForm fieldset {
+    border: none;
+    text-align: center;
+    padding: 8px;
 }
 
 #imageSec{

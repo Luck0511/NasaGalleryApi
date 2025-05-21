@@ -13,9 +13,21 @@ const secElement = document.getElementById('imageSec');
 inForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const formParameter = document.getElementById('parameter').value;
+    const formData = new FormData(document.getElementById('parameterForm'));
+
+    //debug
+    console.log(document.getElementById('parameterForm'));
+    console.log(formData);
+
+    let formParameter = formData.get('parameter');
+    if (formParameter==null) {
+        formParameter = formData.get('parametersList');
+    }
+
+    //debug
     console.log(formParameter);
     console.log(buildRequest(formParameter));
+    //build the API call
     const request = buildRequest(formParameter)
     APIResult = fetch(request);
     console.log(APIResult);
@@ -28,9 +40,8 @@ inForm.addEventListener('submit', (event) => {
                         const cardElement = document.createElement('div');
                         cardElement.setAttribute('class', 'card');
                     element.links.forEach(link => {
-                        if(link.render=="image" && link.rel=="canonical") {
+                        if(link.render=="image" && link.rel=="preview") {
                             const cardIMG = document.createElement('img');
-
                             cardIMG.src = link.href;
                             cardIMG.setAttribute('alt', 'card-img');
 
