@@ -19,17 +19,16 @@
         gallery of the World!</p>
         <form id="parameterForm">
             <fieldset>
-                <label for="parameter">Free Search:</label>
+                <label for="parameter">Free Search:</label><br>
                 <input type="text" id="parameter" name="parameter">
             </fieldset>
 
-            <h2>or</h2>
+            <h3>or</h3>
 
             <fieldset>
-                <label for="parametersList">try our suggestions: </label>
-                <input list="parametersList" id="parametersListSelect" name="parametersList">
-                <select id="parametersList">
-                    <option value="none">-- Select one of the suggestions --</option>
+                <label for="parametersList">try our suggestions: </label><br>
+                <input type="text" id="parametersList" list="recList" name="parametersList">
+                <datalist id="recList">
                     <option value="sun">Sun</option>
                     <option value="mercury">Mercury</option>
                     <option value="venus">Venus</option>
@@ -39,7 +38,7 @@
                     <option value="saturn">Saturn</option>
                     <option value="uranus">Uranus</option>
                     <option value="neptune">Neptune</option>
-                </select>
+                </datalist>
             </fieldset>
 
             <button type="submit">Search</button>

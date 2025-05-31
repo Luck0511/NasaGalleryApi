@@ -5,7 +5,6 @@ function buildRequest(parameter) {
 }
 
 //get form parameter for search purpose
-let APIResult = "";
 const inForm = document.getElementById('parameterForm');
 
 const secElement = document.getElementById('imageSec');
@@ -20,7 +19,7 @@ inForm.addEventListener('submit', (event) => {
     console.log(formData);
 
     let formParameter = formData.get('parameter');
-    if (formParameter==null) {
+    if (formParameter=="") {
         formParameter = formData.get('parametersList');
     }
 
@@ -29,7 +28,7 @@ inForm.addEventListener('submit', (event) => {
     console.log(buildRequest(formParameter));
     //build the API call
     const request = buildRequest(formParameter)
-    APIResult = fetch(request);
+    const APIResult = fetch(request);
     console.log(APIResult);
     //execute search and display
     APIResult
@@ -51,7 +50,7 @@ inForm.addEventListener('submit', (event) => {
                     })
                     element.data.forEach(element => {
                         const cardTXT = document.createElement('p');
-                        cardTXT.textContent = element.description;
+                        cardTXT.textContent = element.title;
                         cardElement.appendChild(cardTXT);
                     })
                 })
