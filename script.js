@@ -19,7 +19,7 @@ inForm.addEventListener('submit', (event) => {
     console.log(formData);
 
     let formParameter = formData.get('parameter');
-    if (formParameter=="") {
+    if (formParameter==="") {
         formParameter = formData.get('parametersList');
     }
 
@@ -39,7 +39,7 @@ inForm.addEventListener('submit', (event) => {
                         const cardElement = document.createElement('div');
                         cardElement.setAttribute('class', 'card');
                     element.links.forEach(link => {
-                        if(link.render=="image" && link.rel=="preview") {
+                        if(link.render==="image" && link.rel==="preview") {
                             const cardIMG = document.createElement('img');
                             cardIMG.src = link.href;
                             cardIMG.setAttribute('alt', 'card-img');
