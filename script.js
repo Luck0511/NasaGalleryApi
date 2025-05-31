@@ -59,33 +59,3 @@ inForm.addEventListener('submit', (event) => {
         console.log(error);
     });
 });
-
-
-
-
-
-
-/*
-    jsonFile.collection.items.forEach(element => {
-        //console.log("i've made it here! "+element);
-        element.links.forEach(link => {
-            //console.log("i've made it here! "+link);
-            if(link.render=="image") {
-                //console.log("i've made it here! inside the link");
-                const cardElement = document.createElement('div');
-                cardElement.setAttribute('class', 'card');
-                const cardIMG = document.createElement('img');
-                const cardTXT = document.createElement('h2');
-
-                cardIMG.src = link.href;
-                cardIMG.setAttribute('alt', 'card-img');
-                cardTXT.textContent = link.rel;
-                console.log(cardIMG);
-                console.log(cardTXT);
-
-                cardElement.appendChild(cardIMG);
-                cardElement.appendChild(cardTXT);
-            }
-        })
-    })
-*/
